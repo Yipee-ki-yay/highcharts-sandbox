@@ -1,3 +1,5 @@
+@import url("https://code.highcharts.com/css/highcharts.css");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,54 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  max-width: 100%;
+}
+
+.two-charts-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.two-charts__item {
+  flex: 1;
+  max-width: 100%;
+  width: 50%;
+}
+
+
+#container {
+    height: 400px;
+    max-width: 800px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.highcharts-plot-background {
+  background-color: #fff;
+}
+
+#gradient-0 stop {
+  stop-color: #7cb5ec;
+}
+
+#gradient-0 stop[offset="0"] {
+  stop-opacity: 0.75;
+}
+
+#gradient-0 stop[offset="1"] {
+  stop-opacity: 0;
+}
+
+.highcharts-color-0 .highcharts-area {
+  fill-opacity: 1;
+  fill: url(#gradient-0);
+}
+
+.highcharts-background {
+  fill: #fff;
 }
