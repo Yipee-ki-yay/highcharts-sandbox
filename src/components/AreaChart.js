@@ -6,40 +6,8 @@ export default function AreaChart() {
   const options = {
     chart: {
       type: "area",
-      styledMode: true,
+      borderColor:"#994edd",
     },
-    defs: {
-      gradient0: {
-          tagName: 'linearGradient',
-          id: 'gradient-0',
-          x1: 0,
-          y1: 0,
-          x2: 0,
-          y2: 1,
-          children: [{
-              tagName: 'stop',
-              offset: 0
-          }, {
-              tagName: 'stop',
-              offset: 1
-          }]
-      },
-      gradient1: {
-          tagName: 'linearGradient',
-          id: 'gradient-1',
-          x1: 0,
-          y1: 0,
-          x2: 0,
-          y2: 1,
-          children: [{
-              tagName: 'stop',
-              offset: 0
-          }, {
-              tagName: 'stop',
-              offset: 1
-          }]
-      }
-  },
     accessibility: {
       description:
         "Image description: An area chart compares the nuclear " +
@@ -113,16 +81,32 @@ export default function AreaChart() {
           },
         },
       },
+      series: {
+        color: "#CE321E", // success stroke #34BD26
+        lineWidth: 4,
+        fillColor: {
+          linearGradient: [0, 0, 0, 400],
+          stops: [
+            [0, "#D34645"], // #3DA864
+            [
+              1,
+              Highcharts.color("#D34645") // #3DA864
+                .setOpacity(0)
+                .get("rgba"),
+            ],
+          ],
+        },
+      },
     },
     series: [
       {
         name: "USA",
         data: [
-          null,
-          null,
-          null,
-          null,
-          null,
+          23368,
+          23317,
+          23575,
+          23205,
+          22217,
           2,
           9,
           13,
